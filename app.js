@@ -1,6 +1,6 @@
 const supabase = window.supabase.createClient(
-  "COLE_SUA_URL",
-  "COLE_SUA_ANON_KEY"
+  "https://zmhwbnxnceibmdmntbhh.supabase.co",
+  "sb_publishable_SARoClbz6SwUk1RHHWDHgw_SUxJAsPe"
 );
 
 // TROCAR TELAS
