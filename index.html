@@ -384,6 +384,25 @@ header nav a{font-size:11px!important}
 @media(max-width:760px){.am2-home-wrap{grid-template-columns:1fr;padding:68px 18px 20px;min-height:auto}.am2-home-copy{text-align:center;margin:auto}.am2-home-copy>p{margin-left:auto;margin-right:auto}.am2-home-cta{margin:auto}.am2-polaroids{width:100%;height:335px;transform:scale(.82);transform-origin:center top;margin-top:-12px;margin-bottom:-58px}.am2-polaroid{width:165px;padding-bottom:34px}.am2-polaroid img{height:198px}.am2-home-bottom{padding:0 18px 14px}.am2-choice-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:420px){.am2-home h1{font-size:43px!important}.am2-polaroids{transform:scale(.72);margin-bottom:-90px}.am2-choice{min-height:84px}.am2-theme-row{grid-template-columns:repeat(2,1fr)}}
 
+
+/* AMORIA PRO — QR showcase editorial premium; preserva o hero e as polaroids */
+.am2-home-wrap{position:relative;z-index:1}
+.am2-qr-showcase.am2-qr-luxe{position:relative;isolation:isolate;overflow:hidden;width:min(1080px,calc(100% - 40px));margin:18px auto 52px;padding:clamp(28px,5vw,58px);display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,.92fr);align-items:center;gap:clamp(20px,5vw,64px);border:1px solid rgba(229,172,133,.24);border-radius:34px;background:radial-gradient(ellipse at 76% 44%,rgba(174,65,105,.25),transparent 42%),linear-gradient(135deg,#21101b 0%,#120810 58%,#080407 100%);box-shadow:0 30px 90px rgba(0,0,0,.42),inset 0 1px rgba(255,255,255,.07)}
+.am2-qr-showcase.am2-qr-luxe:before{content:"";position:absolute;inset:12px;border:1px solid rgba(231,179,110,.11);border-radius:25px;pointer-events:none;z-index:-1}
+.am2-qr-luxe-copy{position:relative;z-index:2;text-align:left}.am2-qr-eyebrow{display:inline-flex;align-items:center;gap:9px;color:#e9bb9d;font-size:9px;font-weight:700;letter-spacing:2px}.am2-qr-eyebrow:before{content:"";width:24px;height:1px;background:#dba16c}
+.am2-qr-luxe-copy h2{margin:18px 0 16px;color:#fff1f2;font:500 clamp(32px,4.4vw,54px)/1.06 "Cormorant Garamond",Georgia,serif;letter-spacing:-.7px}.am2-qr-luxe-copy h2 em{color:#e6ae82;font-style:italic}.am2-qr-luxe-copy p{max-width:390px;color:#c4aab4;font-size:13px;line-height:1.85}
+.am2-qr-points{display:grid;gap:9px;margin:20px 0 24px;color:#e2c9d0;font-size:11px}.am2-qr-points span{display:flex;align-items:center;gap:9px}
+.am2-qr-link{display:inline-flex;align-items:center;gap:24px;padding:14px 19px;border:1px solid rgba(235,190,146,.55);border-radius:999px;background:linear-gradient(135deg,#e9c29c,#d89a78);color:#2b101b!important;text-decoration:none;font-size:12px;font-weight:750;box-shadow:0 12px 32px rgba(206,135,105,.18)}.am2-qr-link b{font-size:17px}
+.am2-qr-stage{position:relative;min-height:480px;display:grid;place-items:center;isolation:isolate}.am2-qr-orbit{position:absolute;border:1px solid rgba(225,166,137,.2);border-radius:50%;aspect-ratio:1;z-index:-1}.am2-qr-orbit-one{width:390px;max-width:100%;transform:rotate(-22deg) scaleY(.8)}.am2-qr-orbit-two{width:320px;max-width:85%;border-style:dashed;transform:rotate(28deg) scaleY(.8)}
+.am2-qr-gift{position:relative;width:min(300px,82%);padding:15px 15px 17px;border-radius:8px;background:linear-gradient(145deg,#fffaf3,#eadbd2);color:#51233a;transform:rotate(-3deg);box-shadow:0 28px 65px rgba(0,0,0,.52),0 0 0 1px rgba(255,255,255,.28);z-index:2}
+.am2-qr-gift-top{display:flex;justify-content:space-between;align-items:center;margin:0 2px 12px;color:#754158;font:600 11px Georgia,serif;letter-spacing:2px}.am2-qr-gift-top span+span{font:700 7px Arial,sans-serif;letter-spacing:1px;color:#a77b83}
+.am2-qr-photo-frame{height:160px;position:relative;overflow:hidden;border-radius:3px;background:#351523}.am2-qr-photo-frame img{width:100%;height:100%;display:block;object-fit:cover;filter:saturate(.82) contrast(1.02)}.am2-qr-photo-frame span{position:absolute;left:10px;bottom:10px;padding:6px 9px;background:rgba(28,8,18,.72);color:#fff;font-size:7px;letter-spacing:1.5px}
+.am2-qr-card-bottom{display:flex;align-items:center;gap:12px;padding:14px 2px 0}.am2-qr-code-art{flex:0 0 112px;padding:5px;border:1px solid #dfc4c1;background:white;border-radius:5px}.am2-qr-code-art svg{display:block;width:100%;height:auto}.am2-qr-card-text b{display:block;font:italic 17px Georgia,serif;color:#58223d}.am2-qr-card-text span{display:block;margin-top:5px;color:#8d6673;font:10px/1.5 Georgia,serif}.am2-qr-card-text small{display:block;margin-top:12px;color:#b18483;font:700 7px Arial,sans-serif;letter-spacing:1.2px}
+.am2-qr-sticker{position:absolute;right:-2px;top:35px;padding:12px 16px;background:#f7e6d6;color:#71354d;border-radius:50%;width:100px;height:100px;display:grid;place-content:center;text-align:center;font:10px/1.3 Georgia,serif;transform:rotate(10deg);box-shadow:0 10px 25px #0004;z-index:3}.am2-qr-sticker i{font-size:14px;color:#bb597c}
+.am2-qr-seal{position:absolute;left:4%;bottom:34px;width:42px;height:42px;border-radius:50%;display:grid;place-items:center;border:1px solid #e4b38c;color:#eac29f;font:italic 24px Georgia,serif;transform:rotate(-12deg)}
+.am2-qr-disclaimer{grid-column:1/-1;text-align:center;margin:-4px 0 0;color:#8f707d;font-size:8px;letter-spacing:1.7px}
+@media(max-width:760px){.am2-qr-showcase.am2-qr-luxe{width:calc(100% - 28px);margin:12px auto 34px;padding:30px 20px 22px;grid-template-columns:1fr;gap:10px;border-radius:27px}.am2-qr-luxe-copy{text-align:center}.am2-qr-eyebrow{font-size:8px;letter-spacing:1.4px}.am2-qr-luxe-copy h2{font-size:38px;margin:15px 0 12px}.am2-qr-luxe-copy p{font-size:12px;margin:0 auto;max-width:330px}.am2-qr-points{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 15px;font-size:10px;margin:16px 0 18px}.am2-qr-link{padding:13px 17px}.am2-qr-stage{min-height:390px;margin-top:0}.am2-qr-gift{width:min(270px,78%)}.am2-qr-photo-frame{height:135px}.am2-qr-code-art{flex-basis:100px}.am2-qr-sticker{right:0;top:24px;width:82px;height:82px;font-size:9px}.am2-qr-seal{left:3%;bottom:22px}.am2-qr-disclaimer{font-size:7px;line-height:1.5;letter-spacing:1.1px}}
+@media(max-width:390px){.am2-qr-luxe-copy h2{font-size:33px}.am2-qr-stage{min-height:350px}.am2-qr-gift{width:78%}.am2-qr-photo-frame{height:120px}}
 </style>
 </head>
 <body>
@@ -714,10 +733,34 @@ function homeFree(){app.innerHTML=`<section class="am2 am2-home">
 <div class="am2-polaroid-note">feito para<br>ser lembrado</div>
 </div>
 </div>
-<div class="am2-qr-showcase" aria-label="Demonstração visual de QR Code personalizado AMORIA">
-<div class="am2-qr-copy"><span>UM DETALHE QUE VIRA PRESENTE</span><h2>Seu QR Code.<br><em>Seu estilo.</em></h2><p>Uma foto especial, uma mensagem e um QR Code criado para surpreender.</p></div>
-<div class="am2-qr-art"><img src="assets/amoria-qr-showcase.svg?v=1" alt="Cartão romântico AMORIA com foto e QR Code personalizado ilustrativo"><span>SIMULAÇÃO VISUAL · QR CODE ILUSTRATIVO</span></div>
-</div>
+<section class="am2-qr-showcase am2-qr-luxe" aria-label="Conheça o QR Code personalizado AMORIA">
+  <div class="am2-qr-luxe-copy">
+    <span class="am2-qr-eyebrow">UM PRESENTE QUE COMEÇA COM UM TOQUE</span>
+    <h2>Uma lembrança.<br><em>Mil maneiras de sentir.</em></h2>
+    <p>Transforme uma foto especial em um presente surpresa. Um QR Code personalizado que revela uma experiência feita por você.</p>
+    <div class="am2-qr-points"><span>✦ Design personalizado</span><span>♡ Sua foto e sua história</span></div>
+    <a class="am2-qr-link" href="#/criar" data-a="new">Criar minha surpresa <b>↗</b></a>
+  </div>
+  <div class="am2-qr-stage">
+    <div class="am2-qr-orbit am2-qr-orbit-one"></div><div class="am2-qr-orbit am2-qr-orbit-two"></div>
+    <div class="am2-qr-gift">
+      <div class="am2-qr-gift-top"><span>AMORIA</span><span>FEITO PARA VOCÊ ♡</span></div>
+      <div class="am2-qr-photo-frame"><img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=900&q=88" alt="Casal compartilhando um momento especial"><span>UMA HISTÓRIA SÓ DE VOCÊS</span></div>
+      <div class="am2-qr-card-bottom">
+        <div class="am2-qr-code-art" aria-hidden="true"><svg viewBox="0 0 210 210" role="img">
+          <rect width="210" height="210" rx="8" fill="#fff"/>
+          <g fill="#54172f">
+            <path d="M8 8h58v58H8z M17 17v40h40V17z M27 27h20v20H27z M144 8h58v58h-58z M153 17v40h40V17z M163 27h20v20h-20z M8 144h58v58H8z M17 153v40h40v-40z M27 163h20v20H27z"/>
+            <path d="M78 8h10v10H78z M98 8h10v10H98z M118 8h10v10h-10z M78 28h10v10H78z M108 28h10v10h-10z M78 48h10v10H78z M98 48h10v10H98z M128 48h10v10h-10z M78 78h10v10H78z M98 78h10v10H98z M118 78h10v10h-10z M138 78h10v10h-10z M158 78h10v10h-10z M178 78h10v10h-10z M8 78h10v10H8z M28 78h10v10H28z M48 78h10v10H48z M8 98h10v10H8z M38 98h10v10H38z M68 98h10v10H68z M88 98h10v10H88z M108 98h10v10h-10z M138 98h10v10h-10z M168 98h10v10h-10z M188 98h10v10h-10z M78 118h10v10H78z M98 118h10v10H98z M118 118h10v10h-10z M148 118h10v10h-10z M178 118h10v10h-10z M78 138h10v10H78z M108 138h10v10h-10z M128 138h10v10h-10z M148 138h10v10h-10z M178 138h10v10h-10z M78 158h10v10H78z M98 158h10v10H98z M118 158h10v10h-10z M138 158h10v10h-10z M168 158h10v10h-10z M188 158h10v10h-10z M78 178h10v10H78z M108 178h10v10h-10z M128 178h10v10h-10z M158 178h10v10h-10z M178 178h10v10h-10z M98 198h10v10H98z M138 198h10v10h-10z M168 198h10v10h-10z"/>
+          </g><circle cx="105" cy="105" r="22" fill="#fff"/><path d="M105 119s-19-12-19-25c0-12 15-17 19-5 5-12 20-7 20 5 0 13-20 25-20 25" fill="#d83c79"/>
+        </svg></div>
+        <div class="am2-qr-card-text"><b>Escaneie e descubra</b><span>Uma experiência feita com amor.</span><small>QR PERSONALIZADO AMORIA</small></div>
+      </div>
+    </div>
+    <div class="am2-qr-sticker">uma surpresa<br><i>inesquecível</i> ♡</div><div class="am2-qr-seal">A</div>
+  </div>
+  <p class="am2-qr-disclaimer">PRÉVIA ILUSTRATIVA · O QR CODE FINAL É GERADO COM A SUA EXPERIÊNCIA</p>
+</section>
 <div class="am2-home-bottom"><span>AMORIA</span><span>Crie · visualize · surpreenda</span></div>
 </section>`}async function dashFree(){const L=SB?await cloudList():load(),T=x=>TY[x.type]||TY.declaracao,H=x=>TH[x.theme]||TH.classic;app.innerHTML=`<div class="wrap"><h2>Minhas experiências</h2><p class="mu">${L.length} ${L.length===1?'experiência':'experiências'} · ${SB?'salvas na sua conta':'salvas neste aparelho'}</p>${L.length?L.map(x=>`<article class="card dc">${x.photos&&x.photos[0]?`<img class="cvr" src="${x.photos[0]}" alt="Capa">`:`<div class="cvr" style="background:${H(x).b}">${T(x).e}</div>`}<div><b>${esc(x.title||'Sem título')}</b><p class="mu">${T(x).n} · ${H(x).n}<br>${x.qrCustom&&!x.qr_custom_paid?'QR personalizado não comprado · ':''}${x.at&&new Date(x.at)>new Date()?'⏰ Agendada':x.priv==='password'?'🔐 Privada por senha':x.priv==='password'?'🔐 Com senha':'🌍 Público'} · ${new Date(x.created||Date.now()).toLocaleDateString('pt-BR')}${x.views!=null?' · 👁 '+x.views:''}</p><div class="row"><button class="sm" data-a="dv:${x.id}">Ver</button><button class="sm" data-a="de:${x.id}">Editar</button><button class="sm" data-a="dd:${x.id}">Duplicar</button>${SB&&!x.paid?`<button class="sm" data-a="pay" data-pay-id="${esc(x.id)}">Pagar agora</button>`:''}${x.paid?`<button class="sm" data-a="ds:${x.id}">Link / QR</button>${SB?`<button class="sm" data-a="qse:${x.id}">Estúdio de QR</button>`:''}`:`<span class="mu">🔒 Link e QR bloqueados até o pagamento</span>`}${SB?`<button class="sm" data-a="st:${x.id}">Estatísticas</button>`:''}<button class="sm" data-a="dx:${x.id}">Excluir</button></div></div></article>`).join(''):'<p>Você ainda não criou nenhuma experiência. <a href="#/criar" data-a="new">Criar a primeira</a></p>'}</div>`}
 
