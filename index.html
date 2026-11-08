@@ -424,6 +424,36 @@ header nav a{font-size:11px!important}
 .am2-qr-luxe-copy{animation:am2QrTextIn 1s .12s both}
 @keyframes am2QrTextIn{from{opacity:0;translate:0 22px;filter:blur(5px)}to{opacity:1;translate:0 0;filter:blur(0)}}
 @media(prefers-reduced-motion:reduce){.am2-qr-particles i,.am2-qr-gift,.am2-qr-stage:after,.am2-qr-code-art:after,.am2-qr-sticker,.am2-qr-luxe-copy{animation:none!important}}
+
+/* AMORIA PRO — hero vivo para a primeira dobra da página inicial */
+.am2-home{position:relative;isolation:isolate;overflow:hidden}
+.am2-home-glow{position:absolute;inset:-15% -10% 0;pointer-events:none;z-index:0!important;background:radial-gradient(ellipse at 78% 35%,rgba(210,74,125,.18),transparent 35%),radial-gradient(ellipse at 22% 68%,rgba(222,174,103,.12),transparent 32%);animation:am2HomeGlow 9s ease-in-out infinite alternate}
+@keyframes am2HomeGlow{0%{opacity:.55;transform:scale(.96)}100%{opacity:1;transform:scale(1.06)}}
+.am2-home-particles{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:0!important}
+.am2-home-particles i{position:absolute!important;left:var(--x);bottom:-12px;width:3px;height:3px;border-radius:50%;background:#f2cf91;box-shadow:0 0 13px 2px rgba(242,207,145,.68);opacity:0;animation:am2HomeRise var(--dur) linear var(--delay) infinite}
+.am2-home-particles i:nth-child(3n){width:2px;height:2px;background:#ff9fc5;box-shadow:0 0 12px 2px rgba(255,159,197,.7)}
+.am2-home-particles i:nth-child(5n){width:4px;height:4px;background:#fff0d6;box-shadow:0 0 17px 3px rgba(255,224,175,.52)}
+@keyframes am2HomeRise{0%{transform:translate3d(0,0,0) scale(.45);opacity:0}14%{opacity:.72}70%{opacity:.3}100%{transform:translate3d(var(--drift),-105vh,0) scale(1.3);opacity:0}}
+.am2-home-wrap{position:relative;z-index:1}
+.am2-home-copy{animation:am2HomeCopyIn 1s cubic-bezier(.2,.8,.2,1) both}
+@keyframes am2HomeCopyIn{from{opacity:0;transform:translateY(22px);filter:blur(5px)}to{opacity:1;transform:translateY(0);filter:blur(0)}}
+.am2-home-brand{animation:am2HomeBrandGlow 4s ease-in-out infinite}
+@keyframes am2HomeBrandGlow{0%,100%{text-shadow:0 0 0 rgba(231,179,110,0)}50%{text-shadow:0 0 22px rgba(231,179,110,.55)}}
+.am2-home-kicker:before{content:"✦";display:inline-block;margin-right:8px;color:#f2c987;animation:am2HomeTwinkle 2.4s ease-in-out infinite}
+@keyframes am2HomeTwinkle{0%,100%{opacity:.4;transform:scale(.8) rotate(0)}50%{opacity:1;transform:scale(1.25) rotate(35deg)}}
+.am2-polaroid{will-change:transform;backface-visibility:hidden}
+.am2-polaroid.p1{animation:am2HomePhoto1 6.5s ease-in-out infinite}
+.am2-polaroid.p2{animation:am2HomePhoto2 7s ease-in-out infinite}
+.am2-polaroid.p3{animation:am2HomePhoto3 6s ease-in-out infinite}
+@keyframes am2HomePhoto1{0%,100%{transform:rotate(-9deg) translateY(0)}50%{transform:rotate(-6deg) translateY(-12px)}}
+@keyframes am2HomePhoto2{0%,100%{transform:rotate(3deg) translateY(0)}50%{transform:rotate(1deg) translateY(-16px)}}
+@keyframes am2HomePhoto3{0%,100%{transform:rotate(10deg) translateY(0)}50%{transform:rotate(7deg) translateY(-10px)}}
+.am2-polaroid-note{animation:am2HomeNote 5s ease-in-out infinite}
+@keyframes am2HomeNote{0%,100%{translate:0 0;rotate:-4deg}50%{translate:0 -7px;rotate:-1deg}}
+.am2-home-cta{position:relative;overflow:hidden;isolation:isolate}
+.am2-home-cta:after{content:"";position:absolute;inset:-80% -35%;z-index:-1;background:linear-gradient(110deg,transparent 43%,rgba(255,255,255,.5) 50%,transparent 57%);transform:translateX(-90%);animation:am2HomeButtonShine 5s ease-in-out infinite}
+@keyframes am2HomeButtonShine{0%,55%{transform:translateX(-90%)}85%,100%{transform:translateX(90%)}}
+@media(prefers-reduced-motion:reduce){.am2-home-particles i,.am2-home-glow,.am2-home-copy,.am2-home-brand,.am2-home-kicker:before,.am2-polaroid,.am2-polaroid-note,.am2-home-cta:after{animation:none!important}}
 </style>
 </head>
 <body>
@@ -738,6 +768,7 @@ function done(link,d){if(!d||!d.paid){BUY={code:'publish_experience',coupon:''};
 /* páginas */
 function homeFree(){app.innerHTML=`<section class="am2 am2-home">
 <div class="am2-home-glow"></div>
+<div class="am2-home-particles" aria-hidden="true"><i style="--x:0%;--dur:7s;--delay:-0s;--drift:-38px"></i><i style="--x:37%;--dur:8s;--delay:-1s;--drift:-19px"></i><i style="--x:74%;--dur:9s;--delay:-2s;--drift:0px"></i><i style="--x:11%;--dur:10s;--delay:-3s;--drift:19px"></i><i style="--x:48%;--dur:11s;--delay:-4s;--drift:-38px"></i><i style="--x:85%;--dur:12s;--delay:-5s;--drift:-19px"></i><i style="--x:22%;--dur:13s;--delay:-6s;--drift:0px"></i><i style="--x:59%;--dur:14s;--delay:-7s;--drift:19px"></i><i style="--x:96%;--dur:7s;--delay:-8s;--drift:-38px"></i><i style="--x:33%;--dur:8s;--delay:-9s;--drift:-19px"></i><i style="--x:70%;--dur:9s;--delay:-10s;--drift:0px"></i><i style="--x:7%;--dur:10s;--delay:-0s;--drift:19px"></i><i style="--x:44%;--dur:11s;--delay:-1s;--drift:-38px"></i><i style="--x:81%;--dur:12s;--delay:-2s;--drift:-19px"></i><i style="--x:18%;--dur:13s;--delay:-3s;--drift:0px"></i><i style="--x:55%;--dur:14s;--delay:-4s;--drift:19px"></i><i style="--x:92%;--dur:7s;--delay:-5s;--drift:-38px"></i><i style="--x:29%;--dur:8s;--delay:-6s;--drift:-19px"></i><i style="--x:66%;--dur:9s;--delay:-7s;--drift:0px"></i><i style="--x:3%;--dur:10s;--delay:-8s;--drift:19px"></i><i style="--x:40%;--dur:11s;--delay:-9s;--drift:-38px"></i><i style="--x:77%;--dur:12s;--delay:-10s;--drift:-19px"></i><i style="--x:14%;--dur:13s;--delay:-0s;--drift:0px"></i><i style="--x:51%;--dur:14s;--delay:-1s;--drift:19px"></i><i style="--x:88%;--dur:7s;--delay:-2s;--drift:-38px"></i><i style="--x:25%;--dur:8s;--delay:-3s;--drift:-19px"></i><i style="--x:62%;--dur:9s;--delay:-4s;--drift:0px"></i><i style="--x:99%;--dur:10s;--delay:-5s;--drift:19px"></i><i style="--x:36%;--dur:11s;--delay:-6s;--drift:-38px"></i><i style="--x:73%;--dur:12s;--delay:-7s;--drift:-19px"></i></div>
 <div class="am2-home-wrap">
 <div class="am2-home-copy">
 <div class="am2-home-brand">AMORIA</div>
