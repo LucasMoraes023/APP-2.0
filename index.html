@@ -823,7 +823,7 @@ case'qsp':studioRemovePhoto(+p);break;case'qsbgr':{if(SQ&&SQ.d.bgImg){const p=SQ
 case'qsfix':studioFix();break;
 case'qsxp':studioExport(p);break;
 case'qr-coupon':BUY.coupon=($('#qr-coupon').value||'').trim().toUpperCase();loadQuote(false);break;
-case'checkout-start':{const em=String($('#checkout-email')?.value||'').trim().toLowerCase();if(!/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(em))return toast('Informe um e-mail válido.');BUY.email=em;const b=$('[data-a="checkout-start"]');if(b)b.disabled=true;await loadQuote(true);if(b)b.disabled=false;break;}
+case'checkout-start':{const em=String($('#checkout-email')?.value||'').trim().toLowerCase();if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em))return toast('Informe um e-mail válido.');BUY.email=em;const b=$('[data-a="checkout-start"]');if(b)b.disabled=true;await loadQuote(true);if(b)b.disabled=false;break;}
 case'prt':PRT=p;admin();break;
 case'pre':prodForm(p);break;
 case'cpe':cpnForm(p);break;
