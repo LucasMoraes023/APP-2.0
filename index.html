@@ -454,6 +454,31 @@ header nav a{font-size:11px!important}
 .am2-home-cta:after{content:"";position:absolute;inset:-80% -35%;z-index:-1;background:linear-gradient(110deg,transparent 43%,rgba(255,255,255,.5) 50%,transparent 57%);transform:translateX(-90%);animation:am2HomeButtonShine 5s ease-in-out infinite}
 @keyframes am2HomeButtonShine{0%,55%{transform:translateX(-90%)}85%,100%{transform:translateX(90%)}}
 @media(prefers-reduced-motion:reduce){.am2-home-particles i,.am2-home-glow,.am2-home-copy,.am2-home-brand,.am2-home-kicker:before,.am2-polaroid,.am2-polaroid-note,.am2-home-cta:after{animation:none!important}}
+
+/* AMORIA PRO — paleta mais rica e detalhes de impacto na primeira dobra */
+.am2-home{background:radial-gradient(ellipse 58% 48% at 78% 26%,rgba(196,54,111,.30),transparent 72%),radial-gradient(ellipse 48% 45% at 12% 72%,rgba(146,63,100,.20),transparent 70%),radial-gradient(ellipse 38% 32% at 52% 0%,rgba(224,169,103,.12),transparent 75%),linear-gradient(145deg,#160712 0%,#260b1b 42%,#10050e 76%,#080308 100%)!important}
+.am2-home:after{content:"";position:absolute;inset:0;pointer-events:none;z-index:0;background:linear-gradient(115deg,transparent 15%,rgba(255,255,255,.018) 48%,transparent 72%);mix-blend-mode:screen}
+.am2-home-brand{color:#f3c98f!important;text-shadow:0 0 24px rgba(243,201,143,.35);letter-spacing:8px!important}
+.am2-home-kicker{display:inline-flex;align-items:center;padding:9px 13px;border:1px solid rgba(245,196,151,.26);border-radius:999px;background:linear-gradient(110deg,rgba(255,255,255,.075),rgba(255,255,255,.018));color:#f2c8d7!important;box-shadow:inset 0 1px rgba(255,255,255,.08),0 8px 28px rgba(0,0,0,.14)}
+.am2-home h1{color:#fff5f7!important;text-shadow:0 8px 38px rgba(0,0,0,.3)}
+.am2-home h1 em{background:linear-gradient(100deg,#f6d6a4 4%,#f19ab9 52%,#eac18a 95%);background-clip:text;-webkit-background-clip:text;color:transparent!important;text-shadow:none!important;filter:drop-shadow(0 5px 20px rgba(231,139,173,.18))}
+.am2-home-copy>p{color:#d2b9c4!important}
+.am2-home-proof{display:flex;align-items:center;gap:8px;color:#c5a8b6!important;font-size:10px!important}
+.am2-home-proof:before{content:"✓";display:grid;place-items:center;width:17px;height:17px;border-radius:50%;background:rgba(151,205,160,.14);border:1px solid rgba(151,205,160,.4);color:#a9e0b4;font-weight:800}
+.am2-home-cta{background:linear-gradient(115deg,#f5d5a4 0%,#e9a7b9 48%,#f0c58e 100%)!important;box-shadow:0 14px 42px rgba(226,151,171,.24),0 0 0 1px rgba(255,255,255,.22),inset 0 1px rgba(255,255,255,.55)!important;transition:transform .25s ease,box-shadow .25s ease!important}
+.am2-home-cta:hover{transform:translateY(-3px);box-shadow:0 20px 55px rgba(226,151,171,.34),0 0 30px rgba(242,197,142,.18)!important}
+.am2-polaroid{border:1px solid rgba(255,255,255,.72)!important;box-shadow:0 28px 75px rgba(0,0,0,.56),0 0 32px rgba(226,153,177,.13)!important}
+.am2-polaroid.p2{box-shadow:0 30px 85px rgba(0,0,0,.6),0 0 36px rgba(244,207,158,.18)!important}
+.am2-polaroid-note{border:1px solid rgba(194,131,101,.28);box-shadow:0 16px 40px rgba(0,0,0,.35),0 0 22px rgba(236,182,139,.12)!important}
+.am2-home-floating{position:absolute;z-index:7;display:flex;align-items:center;gap:7px;padding:9px 12px;border:1px solid rgba(245,205,166,.28);border-radius:999px;background:rgba(30,9,22,.78);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);color:#f8e5eb;box-shadow:0 12px 32px rgba(0,0,0,.28),inset 0 1px rgba(255,255,255,.08);font-size:9px;letter-spacing:.3px;animation:am2FloatBadge 5s ease-in-out infinite}
+.am2-home-floating span{color:#f3b2ca;font-size:16px}.am2-home-floating b{font-weight:600}
+.am2-float-love{right:0;top:16%;animation-delay:-1.5s}.am2-float-memory{left:0;bottom:13%;animation-delay:-3.2s}
+@keyframes am2FloatBadge{0%,100%{translate:0 0;rotate:-2deg}50%{translate:0 -9px;rotate:1deg}}
+.am2-home-spark{position:absolute;z-index:6;color:#f6d29b;text-shadow:0 0 18px rgba(255,199,146,.8);pointer-events:none;animation:am2SparkPulse 3s ease-in-out infinite}
+.am2-spark-one{left:8%;top:18%;font-size:31px}.am2-spark-two{right:5%;top:42%;font-size:20px;animation-delay:-1s}.am2-spark-three{left:48%;bottom:8%;font-size:22px;color:#f3a8c4;animation-delay:-2s}
+@keyframes am2SparkPulse{0%,100%{opacity:.38;scale:.75;rotate:0deg}50%{opacity:1;scale:1.2;rotate:24deg}}
+@media(max-width:760px){.am2-home-floating{font-size:8px;padding:7px 9px}.am2-float-love{right:0;top:4%}.am2-float-memory{left:0;bottom:4%}.am2-spark-one{left:2%;top:15%}.am2-spark-two{right:3%;top:47%}.am2-spark-three{left:50%;bottom:0}}
+@media(prefers-reduced-motion:reduce){.am2-home-floating,.am2-home-spark{animation:none!important}}
 </style>
 </head>
 <body>
@@ -783,6 +808,9 @@ function homeFree(){app.innerHTML=`<section class="am2 am2-home">
 <figure class="am2-polaroid p2"><img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=800&q=88" alt="Momento romântico"><figcaption>Um momento só nosso</figcaption></figure>
 <figure class="am2-polaroid p3"><img src="https://images.unsplash.com/photo-1518199266791-5375a83190b7?auto=format&fit=crop&w=800&q=88" alt="Flores e romance"><figcaption>Para guardar</figcaption></figure>
 <div class="am2-polaroid-note">feito para<br>ser lembrado</div>
+<div class="am2-home-floating am2-float-love" aria-hidden="true"><span>♡</span><b>feito com amor</b></div>
+<div class="am2-home-floating am2-float-memory" aria-hidden="true"><span>✦</span><b>guarde esse momento</b></div>
+<div class="am2-home-spark am2-spark-one" aria-hidden="true">✧</div><div class="am2-home-spark am2-spark-two" aria-hidden="true">✦</div><div class="am2-home-spark am2-spark-three" aria-hidden="true">♡</div>
 </div>
 </div>
 <section class="am2-qr-showcase am2-qr-luxe" aria-label="Conheça o QR Code personalizado AMORIA">
