@@ -615,7 +615,7 @@ const box=$('#am2-video-preview'),v=$('#am2-video');if(!box||!v)return;
 if(v.dataset.generating==='1')return;
 if(v.dataset.ready==='1'){v.play().catch(()=>{});return}
 v.dataset.generating='1';box.hidden=false;box.scrollIntoView({behavior:'smooth',block:'center'});
-const ratio=(D.videoStudio&&D.videoStudio.format)||'9:16',dims={'9:16':[720,1280],'16:9':[1280,720],'1:1':[900,900],'4:5':[720,900],'4:3':[960,720]},[W,H]=dims[ratio]||[720,1280],FPS=30,DURATION=32000,canvas=document.createElement('canvas');canvas.width=W;canvas.height=H;
+const ratio=(D.videoStudio&&D.videoStudio.format)||'9:16',dims={'9:16':[1080,1920],'16:9':[1920,1080],'1:1':[1080,1080],'4:5':[1080,1350],'4:3':[1440,1080]},[W,H]=dims[ratio]||[720,1280],FPS=30,DURATION=32000,canvas=document.createElement('canvas');canvas.width=W;canvas.height=H;
 const ctx=canvas.getContext('2d');if(!ctx){v.dataset.generating='0';toast('Não foi possível preparar o vídeo neste navegador.');return}
 let audio=null,ac=null,rec=null,stream=null;
 try{
