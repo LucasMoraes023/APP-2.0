@@ -350,6 +350,8 @@ header nav a{font-size:11px!important}
 .am2-qr-symbol i{background:#5b1732;border-radius:2px}.am2-qr-symbol i:nth-child(3n),.am2-qr-symbol i:nth-child(4n+1){background:#d59b65}.am2-qr-symbol i:nth-child(5n){background:#fff;border:1px solid #5b1732}
 .am2-qr-paper b{display:block;margin-top:7px;font:600 12px Georgia,serif}.am2-qr-paper small{display:block;margin-top:3px;color:#8c6b75;font-size:8px}.am2-qr-caption{text-align:center;color:#80616c;font-size:8px;letter-spacing:2px;margin-top:11px}
 @media(max-width:760px){.am2-home-wrap{grid-template-columns:1fr;min-height:auto;padding:48px 20px 24px;gap:18px}.am2-polaroids{height:310px;width:100%;max-width:420px}.am2-polaroid{width:150px;padding:7px 7px 30px}.am2-polaroid img{height:180px}.am2-polaroid.p2{left:32%;top:6px}.am2-polaroid.p1{top:54px}.am2-polaroid.p3{top:62px}.am2-polaroid figcaption{font-size:13px}.am2-qr-showcase{grid-template-columns:1fr;width:calc(100% - 32px);padding:22px 18px;margin:8px auto 36px;text-align:center;gap:18px}.am2-qr-copy p{margin:auto}.am2-qr-mock{width:min(100%,280px)}.am2-qr-photo{height:135px}}
+
+.am2-qr-art{width:min(100%,360px);margin:auto;text-align:center}.am2-qr-art img{display:block;width:100%;height:auto;border-radius:22px;box-shadow:0 22px 55px #0009;border:1px solid rgba(231,179,110,.35)}.am2-qr-art span{display:block;margin-top:10px;color:#c9a9b5;font-size:9px;letter-spacing:1.4px}
 </style>
 <link rel="stylesheet" href="assets/landing-v2.css?v=2.2">
 <style>
@@ -712,13 +714,9 @@ function homeFree(){app.innerHTML=`<section class="am2 am2-home">
 <div class="am2-polaroid-note">feito para<br>ser lembrado</div>
 </div>
 </div>
-<div class="am2-qr-showcase" aria-label="Exemplo ilustrativo de QR Code personalizado">
+<div class="am2-qr-showcase" aria-label="Demonstração visual de QR Code personalizado AMORIA">
 <div class="am2-qr-copy"><span>UM DETALHE QUE VIRA PRESENTE</span><h2>Seu QR Code.<br><em>Seu estilo.</em></h2><p>Uma foto especial, uma mensagem e um QR Code criado para surpreender.</p></div>
-<div class="am2-qr-mock">
-<div class="am2-qr-photo"><img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=900&q=88" alt="Casal em um momento romântico"><span>UMA SURPRESA PARA VOCÊ</span></div>
-<div class="am2-qr-paper"><div class="am2-qr-symbol" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><b>Escaneie e reviva</b><small>Uma lembrança feita com amor</small></div>
-<div class="am2-qr-caption">AMORIA · QR PERSONALIZADO</div>
-</div>
+<div class="am2-qr-art"><img src="assets/amoria-qr-showcase.svg?v=1" alt="Cartão romântico AMORIA com foto e QR Code personalizado ilustrativo"><span>SIMULAÇÃO VISUAL · QR CODE ILUSTRATIVO</span></div>
 </div>
 <div class="am2-home-bottom"><span>AMORIA</span><span>Crie · visualize · surpreenda</span></div>
 </section>`}async function dashFree(){const L=SB?await cloudList():load(),T=x=>TY[x.type]||TY.declaracao,H=x=>TH[x.theme]||TH.classic;app.innerHTML=`<div class="wrap"><h2>Minhas experiências</h2><p class="mu">${L.length} ${L.length===1?'experiência':'experiências'} · ${SB?'salvas na sua conta':'salvas neste aparelho'}</p>${L.length?L.map(x=>`<article class="card dc">${x.photos&&x.photos[0]?`<img class="cvr" src="${x.photos[0]}" alt="Capa">`:`<div class="cvr" style="background:${H(x).b}">${T(x).e}</div>`}<div><b>${esc(x.title||'Sem título')}</b><p class="mu">${T(x).n} · ${H(x).n}<br>${x.qrCustom&&!x.qr_custom_paid?'QR personalizado não comprado · ':''}${x.at&&new Date(x.at)>new Date()?'⏰ Agendada':x.priv==='password'?'🔐 Privada por senha':x.priv==='password'?'🔐 Com senha':'🌍 Público'} · ${new Date(x.created||Date.now()).toLocaleDateString('pt-BR')}${x.views!=null?' · 👁 '+x.views:''}</p><div class="row"><button class="sm" data-a="dv:${x.id}">Ver</button><button class="sm" data-a="de:${x.id}">Editar</button><button class="sm" data-a="dd:${x.id}">Duplicar</button>${SB&&!x.paid?`<button class="sm" data-a="pay" data-pay-id="${esc(x.id)}">Pagar agora</button>`:''}${x.paid?`<button class="sm" data-a="ds:${x.id}">Link / QR</button>${SB?`<button class="sm" data-a="qse:${x.id}">Estúdio de QR</button>`:''}`:`<span class="mu">🔒 Link e QR bloqueados até o pagamento</span>`}${SB?`<button class="sm" data-a="st:${x.id}">Estatísticas</button>`:''}<button class="sm" data-a="dx:${x.id}">Excluir</button></div></div></article>`).join(''):'<p>Você ainda não criou nenhuma experiência. <a href="#/criar" data-a="new">Criar a primeira</a></p>'}</div>`}
