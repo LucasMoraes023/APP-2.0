@@ -1,0 +1,3 @@
+-- Deprecated compatibility filename; intentionally contains no SQL statements.
+-- Do not run the old paid-link migration: it would re-block free publications.
+-- For existing projects, run supabase/free-experiences-qr-addon.sql instead.
