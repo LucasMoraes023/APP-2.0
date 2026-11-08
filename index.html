@@ -326,6 +326,20 @@ header nav a{font-size:11px!important}
 .am2-editor-error{min-height:70dvh;display:grid;place-content:center;text-align:center;padding:30px;background:#0d0409;color:#fff}.am2-editor-logo{font:600 18px Cinzel,serif;letter-spacing:.3em;color:#e7b36e;margin-bottom:20px}.am2-editor-error p{color:#9f7d88;margin:10px 0 20px}
 @media(max-width:560px){.am2-editor-top{padding:20px 18px 11px}.am2-editor-head{padding-top:30px}.am2-editor-content{width:calc(100% - 24px)}.am2-editor-card{padding:19px 15px;border-radius:24px}.am2-editor-card .grid{grid-template-columns:1fr 1fr}.am2-editor-card .grid .opt{min-height:82px}.am2-editor-card input,.am2-editor-card textarea,.am2-editor-card select{font-size:16px}.am2-editor-nav-inner{padding:10px;border-radius:20px}.am2-nav-next{padding:13px 15px}}
 @media(min-width:800px){.am2-editor-card{padding:30px}.am2-editor-head{padding-top:44px}}
+
+/* AMORIA PRO — apresentação imersiva e leitura confortável */
+.ov{background:var(--b);background-image:radial-gradient(ellipse at 50% 0%,color-mix(in srgb,var(--a) 18%,transparent),transparent 55%);scroll-behavior:smooth;overscroll-behavior:contain}
+.story{max-width:680px;padding:clamp(1rem,4vw,2rem) clamp(.9rem,3vw,1.5rem) calc(7rem + env(safe-area-inset-bottom,0px))}
+.story section{position:relative;min-height:62vh;padding:clamp(2.2rem,7vh,4.5rem) clamp(1.15rem,5vw,2.6rem);margin:0 0 1.15rem;border:1px solid color-mix(in srgb,var(--a) 30%,transparent);border-radius:30px;background:linear-gradient(145deg,color-mix(in srgb,var(--c) 94%,transparent),color-mix(in srgb,var(--b) 82%,transparent));box-shadow:0 22px 65px rgba(0,0,0,.16),inset 0 1px 0 rgba(255,255,255,.12);backdrop-filter:blur(14px)}
+.story section.top{min-height:100vh;min-height:100dvh;margin:0 -.2rem 1rem;border:0;border-radius:0;background:transparent;box-shadow:none}
+.story .cv{width:min(82vw,390px);max-height:52vh;aspect-ratio:4/5;object-fit:cover;border:7px solid rgba(255,255,255,.16);outline:1px solid color-mix(in srgb,var(--a) 55%,transparent);border-radius:28px;box-shadow:0 26px 70px rgba(0,0,0,.32)}
+.story blockquote{max-width:19em;font-size:clamp(1.65rem,6vw,2.35rem);line-height:1.3;text-wrap:balance}
+.story .eb{letter-spacing:.12em;text-transform:uppercase;font-size:.72rem;font-weight:650}
+.story .q{text-wrap:balance;line-height:1.15}
+.story .gal,.story .pol,.story .lt,.story .tl{max-width:520px}
+.auto-scroll{position:fixed;z-index:15;right:16px;bottom:calc(18px + env(safe-area-inset-bottom,0px));border:1px solid color-mix(in srgb,var(--a) 65%,white);border-radius:999px;padding:.75rem 1.05rem;background:color-mix(in srgb,var(--b) 78%,#090409);color:var(--f);font:600 .82rem Inter,system-ui,sans-serif;box-shadow:0 8px 30px rgba(0,0,0,.3);backdrop-filter:blur(12px);cursor:pointer}
+@media(max-width:520px){.story{padding-left:.85rem;padding-right:.85rem}.story section{border-radius:24px;min-height:58vh}.auto-scroll{right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.ov{scroll-behavior:auto}.auto-scroll{display:none}}
 </style>
 <link rel="stylesheet" href="assets/landing-v2.css?v=2.1">
 <style>
@@ -716,6 +730,8 @@ o.innerHTML=`<div class="fx" aria-hidden="true"></div><i class="pgb" id="pgb"></
 document.body.append(o);document.body.classList.add('lock');
 if(d.music){const pb=s=>{const b=$('#mpb');if(b)b.textContent=s};A=new Audio(d.music.url);A.loop=true;A.volume=.8;A.onplay=()=>pb('⏸');A.onpause=()=>pb('▶');A.ontimeupdate=()=>{const r=$('[data-pg]');if(r&&A&&A.duration)r.value=A.currentTime/A.duration*100}}
 $('[data-a=open]',o).focus()}
+let AUTO_SCROLL_TIMER=0,AUTO_SCROLL_ON=false;
+function autoScroll(o){clearInterval(AUTO_SCROLL_TIMER);AUTO_SCROLL_ON=true;let b=o.querySelector('#auto-scroll');if(!b){b=document.createElement('button');b.id='auto-scroll';b.className='auto-scroll';b.dataset.a='autoscroll';b.type='button';o.append(b)}const paint=()=>{b.textContent=AUTO_SCROLL_ON?'Ⅱ Pausar apresentação':'▶ Continuar apresentação';b.setAttribute('aria-pressed',String(AUTO_SCROLL_ON))};const pause=()=>{if(!AUTO_SCROLL_ON)return;AUTO_SCROLL_ON=false;clearInterval(AUTO_SCROLL_TIMER);paint()};['wheel','touchstart','pointerdown','keydown'].forEach(ev=>o.addEventListener(ev,e=>{if(e.target.closest('#auto-scroll'))return;pause()},{passive:true}));const run=()=>{clearInterval(AUTO_SCROLL_TIMER);AUTO_SCROLL_ON=true;paint();AUTO_SCROLL_TIMER=setInterval(()=>{if(!o.isConnected){clearInterval(AUTO_SCROLL_TIMER);AUTO_SCROLL_ON=false;return}if(o.scrollTop+o.clientHeight>=o.scrollHeight-3){pause();return}o.scrollTop+=.72},40)};b.onclick=null;paint();run();}
 function reveal(o,d){o.onscroll=()=>{const b=$('#pgb');if(b)b.style.width=(o.scrollTop/((o.scrollHeight-o.clientHeight)||1)*100)+'%'};io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{root:o,rootMargin:'0px 0px -8% 0px'});o.querySelectorAll('.rv').forEach(e=>io.observe(e));
 if(d.counter&&d.date){const a=new Date(d.date+'T00:00'),p=v=>String(v).padStart(2,'0'),tick=()=>{if(!$('#ctr'))return;const n=new Date(),[s,u]=a>n?[n,a]:[a,n];let y=u.getFullYear()-s.getFullYear(),m=u.getMonth()-s.getMonth(),dd=u.getDate()-s.getDate();if(dd<0){m--;dd+=new Date(u.getFullYear(),u.getMonth(),0).getDate()}if(m<0){y--;m+=12}const ms=u-s;$('#ctr').innerHTML=[[y,'ano','anos'],[m,'mês','meses'],[dd,'dia','dias']].map(([v,s1,p1])=>`<div><b>${v}</b><span>${v===1?s1:p1}</span></div>`).join('');$('#ck').textContent=`${p(Math.floor(ms/36e5)%24)}:${p(Math.floor(ms/6e4)%60)}:${p(Math.floor(ms/1e3)%60)}`};tick();tm=setInterval(tick,1000)}
 if(d.photos&&d.photos.length>1&&!RM)ct=setInterval(()=>{if(!$('#lb'))gs(gi+1)},4500)}
@@ -856,7 +872,8 @@ case'prev':openExp(D);break;
 case'video-studio':videoStudio();break;case'vs-back':editor();break;case'vs-scene':VS_INDEX=+p;videoStudio();break;case'vs-save':{const v=$('#am2-video');if(v){v.dataset.ready='';if(v.dataset.previewUrl){URL.revokeObjectURL(v.dataset.previewUrl);delete v.dataset.previewUrl}v.removeAttribute('src')}editor();toast('Edição do vídeo salva nesta criação.');break}case'video-preview':generateVideoPreview();break;case'pub':publish();break;
 case'x':exit();break;
 case'unlock':try{start(await dec(LC,$('#pw').value))}catch{$('#pe').textContent='Senha incorreta. Tente de novo.'}break;
-case'open':{const o=$('#ov'),i=$('#in');i.classList.add('gone');if(A)A.play().catch(()=>{const m=$('#mt');if(m)m.textContent='Toque para ouvir nossa música ❤️'});setTimeout(()=>{if($('#ov')!==o)return;i.remove();cinema(o,CUR,()=>{if($('#ov')!==o)return;$('.story',o).hidden=false;const mp=$('.mp',o);if(mp)mp.hidden=false;fx(o,CUR.fx,CUR.fx==='confetti'?60:24);reveal(o,CUR)})},RM?0:700);break}
+case'open':{const o=$('#ov'),i=$('#in');i.classList.add('gone');if(A)A.play().catch(()=>{const m=$('#mt');if(m)m.textContent='Toque para ouvir nossa música ❤️'});setTimeout(()=>{if($('#ov')!==o)return;i.remove();cinema(o,CUR,()=>{if($('#ov')!==o)return;$('.story',o).hidden=false;const mp=$('.mp',o);if(mp)mp.hidden=false;fx(o,CUR.fx,CUR.fx==='confetti'?60:24);reveal(o,CUR);autoScroll(o)})},RM?0:700);break}
+case'autoscroll':{const o=$('#ov');if(!o)break;if(AUTO_SCROLL_ON){AUTO_SCROLL_ON=false;clearInterval(AUTO_SCROLL_TIMER);const b=$('#auto-scroll',o);if(b)b.textContent='▶ Continuar apresentação'}else{AUTO_SCROLL_ON=true;const b=$('#auto-scroll',o);if(b)b.textContent='Ⅱ Pausar apresentação';AUTO_SCROLL_TIMER=setInterval(()=>{if(!o.isConnected){clearInterval(AUTO_SCROLL_TIMER);AUTO_SCROLL_ON=false;return}if(o.scrollTop+o.clientHeight>=o.scrollHeight-3){AUTO_SCROLL_ON=false;clearInterval(AUTO_SCROLL_TIMER);const x=$('#auto-scroll',o);if(x)x.textContent='▶ Continuar apresentação';return}o.scrollTop+=.72},40)}break}
 case'env':$('#lt').classList.add('open');break;
 case'yes':$('#ans').textContent='Você disse SIM! 🎉❤️';fx($('#ov'),'hearts',40);break;
 case'no':$('#ans').textContent='Tudo bem, eu espero... 😉';break;
