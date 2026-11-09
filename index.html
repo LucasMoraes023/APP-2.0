@@ -832,15 +832,7 @@ function homeFree(){app.innerHTML=`<section class="am2 am2-home">
 <a class="btn am2-home-cta" href="#/criar" data-a="new"><span>✦</span> Criar minha experiência <b>→</b></a>
 <div class="am2-home-proof">Sem cadastro no começo · você vê a prévia antes de pagar</div><a class="vsx-home-link" href="#/video-studio">🎬 Abrir editor de vídeo independente <span>↗</span></a>
 </div>
-<div class="am2-polaroids" aria-label="Exemplos de memórias">
-<figure class="am2-polaroid p1"><img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=800&q=88" alt="Casal em um momento especial"><figcaption>Nossa história</figcaption></figure>
-<figure class="am2-polaroid p2"><img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=800&q=88" alt="Momento romântico"><figcaption>Um momento só nosso</figcaption></figure>
-<figure class="am2-polaroid p3"><img src="https://images.unsplash.com/photo-1518199266791-5375a83190b7?auto=format&fit=crop&w=800&q=88" alt="Flores e romance"><figcaption>Para guardar</figcaption></figure>
-<div class="am2-polaroid-note">feito para<br>ser lembrado</div>
-<div class="am2-home-floating am2-float-love" aria-hidden="true"><span>♡</span><b>feito com amor</b></div>
-<div class="am2-home-floating am2-float-memory" aria-hidden="true"><span>✦</span><b>guarde esse momento</b></div>
-<div class="am2-home-spark am2-spark-one" aria-hidden="true">✧</div><div class="am2-home-spark am2-spark-two" aria-hidden="true">✦</div><div class="am2-home-spark am2-spark-three" aria-hidden="true">♡</div>
-</div>
+<div class="am2-hero-visual" aria-label="Casal vivendo um momento especial"><img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=1600&q=90" alt="Casal abraçado em um momento romântico"><div class="am2-hero-image-shade"></div><div class="am2-hero-image-caption"><span>UMA HISTÓRIA SÓ DE VOCÊS</span><b>O amor merece ser lembrado.</b></div><div class="am2-hero-image-chip"><span>♡</span> Feito para emocionar</div><i class="am2-hero-orbit orbit-a"></i><i class="am2-hero-orbit orbit-b"></i></div>
 </div>
 <section class="am2-qr-showcase am2-qr-luxe" aria-label="Conheça o QR Code personalizado AMORIA">
   <div class="am2-qr-particles" aria-hidden="true"><i style="--x:0%;--d:6s;--delay:-0s;--drift:-35px"></i><i style="--x:37%;--d:7s;--delay:-1s;--drift:-18px"></i><i style="--x:74%;--d:8s;--delay:-2s;--drift:-1px"></i><i style="--x:11%;--d:9s;--delay:-3s;--drift:16px"></i><i style="--x:48%;--d:10s;--delay:-4s;--drift:33px"></i><i style="--x:85%;--d:11s;--delay:-5s;--drift:-20px"></i><i style="--x:22%;--d:12s;--delay:-6s;--drift:-3px"></i><i style="--x:59%;--d:6s;--delay:-7s;--drift:14px"></i><i style="--x:96%;--d:7s;--delay:-8s;--drift:31px"></i><i style="--x:33%;--d:8s;--delay:-0s;--drift:-22px"></i><i style="--x:70%;--d:9s;--delay:-1s;--drift:-5px"></i><i style="--x:7%;--d:10s;--delay:-2s;--drift:12px"></i><i style="--x:44%;--d:11s;--delay:-3s;--drift:29px"></i><i style="--x:81%;--d:12s;--delay:-4s;--drift:-24px"></i><i style="--x:18%;--d:6s;--delay:-5s;--drift:-7px"></i><i style="--x:55%;--d:7s;--delay:-6s;--drift:10px"></i><i style="--x:92%;--d:8s;--delay:-7s;--drift:27px"></i><i style="--x:29%;--d:9s;--delay:-8s;--drift:-26px"></i><i style="--x:66%;--d:10s;--delay:-0s;--drift:-9px"></i><i style="--x:3%;--d:11s;--delay:-1s;--drift:8px"></i><i style="--x:40%;--d:12s;--delay:-2s;--drift:25px"></i><i style="--x:77%;--d:6s;--delay:-3s;--drift:-28px"></i><i style="--x:14%;--d:7s;--delay:-4s;--drift:-11px"></i><i style="--x:51%;--d:8s;--delay:-5s;--drift:6px"></i></div>
@@ -1333,6 +1325,43 @@ html:has(.vsx-shell),body:has(.vsx-shell){height:100%;min-height:0;overflow:hidd
  .vsx-note{font-size:7px}
 }
 @media(prefers-reduced-motion:reduce){.vsx-shell *{scroll-behavior:auto!important;transition:none!important}}
+</style>
+<style id="amoria-home-rebuild-2026">
+.am2-home{position:relative;isolation:isolate;overflow:hidden;min-height:100svh;padding:clamp(24px,5vw,70px) clamp(16px,5vw,7vw) 26px;background:#080711;color:#fff;font-family:Inter,system-ui,sans-serif}
+.am2-home:before{content:"";position:absolute;z-index:-2;inset:0;background:radial-gradient(ellipse at 78% 18%,#a3147040,transparent 36%),radial-gradient(ellipse at 12% 62%,#5122a833,transparent 40%),linear-gradient(135deg,#080711,#10091c 55%,#090711)}
+.am2-home:after{content:"";position:absolute;z-index:-1;inset:0;pointer-events:none;opacity:.17;background-image:radial-gradient(#f6a8e8 .7px,transparent .7px);background-size:32px 32px;mask-image:linear-gradient(#000,transparent 88%)}
+.am2-home-glow{position:absolute;z-index:-1;width:55vw;height:55vw;right:-14vw;top:8%;border-radius:50%;background:#c51b9b1c;filter:blur(80px);pointer-events:none}
+.am2-home-wrap{width:min(1240px,100%);min-height:min(760px,calc(100svh - 80px));margin:0 auto;display:grid;grid-template-columns:minmax(0,.86fr) minmax(0,1.14fr);align-items:center;gap:clamp(25px,5vw,74px);padding:24px 0 54px}
+.am2-home-copy{position:relative;z-index:2;max-width:570px}
+.am2-home-brand{width:min(270px,78%);height:76px;margin:0 0 34px -5px}
+.am2-home-brand:before{background:radial-gradient(ellipse,#d62bbd42,transparent 70%);filter:blur(18px)}
+.am2-home-brand img{filter:hue-rotate(285deg) saturate(1.5) drop-shadow(0 0 16px #e52edc55)}
+.am2-brand-aura{border-color:#ef72df55;box-shadow:0 0 30px #d72acb35,inset 0 0 20px #d72acb20}
+.am2-home-kicker{display:inline-flex;align-items:center;gap:9px;color:#f18be7;font-size:10px;font-weight:800;letter-spacing:3px;text-transform:uppercase}
+.am2-home-kicker:before{content:"";width:24px;height:2px;border-radius:2px;background:linear-gradient(90deg,#f23cc7,#8b5cff)}
+.am2-home-copy h1{max-width:650px;margin:20px 0 17px;color:#fff;font-size:clamp(42px,6.2vw,78px);font-weight:800;line-height:.99;letter-spacing:-3.5px;text-wrap:balance}
+.am2-home-copy h1 em{display:block;margin-top:8px;color:#ed62d6;font-style:normal;background:linear-gradient(95deg,#ff83d9,#bd70ff 75%);background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.am2-home-copy>p{max-width:470px;margin:0 0 27px;color:#c9bfd4;font-size:clamp(14px,1.3vw,17px);line-height:1.75}
+.am2-home-cta{min-height:58px;display:inline-flex;align-items:center;justify-content:center;gap:13px;padding:0 25px;border:1px solid #ff8ae6;border-radius:15px;background:linear-gradient(110deg,#d51caa,#9c35e9 58%,#6b45ef);color:#fff;font-size:14px;font-weight:800;box-shadow:0 12px 38px #c21b9a55,0 0 0 5px #df49ca13;transition:transform .25s,box-shadow .25s}
+.am2-home-cta:hover{transform:translateY(-3px);box-shadow:0 17px 44px #c21b9a77,0 0 0 7px #df49ca1c}.am2-home-cta span,.am2-home-cta b{font-size:19px}
+.am2-home-proof{margin-top:16px;color:#a99db5;font-size:11px}
+.vsx-home-link{display:flex;width:max-content;max-width:100%;align-items:center;gap:9px;margin-top:20px;padding:10px 14px;border:1px solid #bd6df044;border-radius:11px;background:#a04cda12;color:#e9c6ff;font-size:11px}.vsx-home-link span{color:#ef7bdb}
+.am2-hero-visual{position:relative;isolation:isolate;min-width:0;width:100%;height:clamp(430px,54vw,660px);border:1px solid #e96edb77;border-radius:30px 30px 120px 30px;overflow:hidden;background:#180b24;box-shadow:0 30px 90px #0009,0 0 55px #c92dbb20}
+.am2-hero-visual:before{content:"";position:absolute;z-index:2;inset:12px;border:1px solid #ffffff35;border-radius:23px 23px 105px 23px;pointer-events:none}
+.am2-hero-visual>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:48% center;filter:saturate(1.14) contrast(1.04);animation:am2HeroSlowZoom 20s ease-in-out infinite alternate}
+.am2-hero-image-shade{position:absolute;z-index:1;inset:0;background:linear-gradient(180deg,#08071105 30%,#08071135 55%,#080711ed 100%),linear-gradient(90deg,#18091b30,transparent 65%)}
+.am2-hero-image-caption{position:absolute;z-index:3;left:clamp(22px,4vw,42px);right:25px;bottom:clamp(35px,5vw,55px);display:grid;gap:10px}
+.am2-hero-image-caption span{color:#ff9ce8;font-size:9px;font-weight:800;letter-spacing:3px}.am2-hero-image-caption b{max-width:440px;color:white;font:italic 500 clamp(25px,3.3vw,42px)/1.08 Georgia,serif;text-shadow:0 3px 24px #000}
+.am2-hero-image-chip{position:absolute;z-index:3;top:28px;right:28px;display:flex;align-items:center;gap:8px;padding:11px 15px;border:1px solid #ffffff55;border-radius:999px;background:#160b25a8;color:#fff;font-size:10px;backdrop-filter:blur(14px)}.am2-hero-image-chip span{color:#ff75d9;font-size:17px}
+.am2-hero-orbit{position:absolute;z-index:2;display:block;border:1px solid #ff7be877;border-radius:50%;pointer-events:none;filter:drop-shadow(0 0 10px #e747d9)}.orbit-a{width:80px;height:80px;right:-24px;top:27%;animation:am2Orbit 12s linear infinite}.orbit-b{width:28px;height:28px;right:10%;top:18%;border-color:#fff9;box-shadow:0 0 24px #ef72e9}
+.am2-home-particles i{background:#f77de5;box-shadow:0 0 12px #ec54d6}.am2-home-spark{color:#f27ce6;text-shadow:0 0 18px #e42bc9}
+.am2-qr-showcase.am2-qr-luxe{width:min(1240px,100%);margin:15px auto 0;padding:clamp(24px,5vw,60px);border:1px solid #a34ecb55;border-radius:30px;background:radial-gradient(ellipse at 78% 40%,#8d27a12a,transparent 38%),linear-gradient(140deg,#171025,#0e0a18 60%,#1a0b20);box-shadow:0 24px 75px #0005}
+.am2-qr-eyebrow{color:#ef83df!important}.am2-qr-luxe-copy h2 em{color:#e77bdc!important}.am2-qr-link{background:linear-gradient(110deg,#c71a9f,#8538e9)!important;border-color:#f07ce2!important;color:#fff!important}
+.am2-qr-stage{filter:drop-shadow(0 20px 40px #0008)}.am2-qr-orbit{border-color:#d94bc855!important}.am2-qr-gift{border-color:#bd6bdc!important;box-shadow:0 20px 70px #0008,0 0 35px #bb31c522!important}.am2-qr-gift-top span:first-child{color:#f5a2e8!important}.am2-qr-sticker{background:linear-gradient(135deg,#c71a9f,#7d39d9)!important;color:white!important}
+.am2-home-bottom{width:min(1240px,100%);margin:32px auto 0;padding:18px 2px 0;border-top:1px solid #ffffff18;color:#8f849d;font-size:10px;letter-spacing:1px}.am2-home-bottom span:first-child{color:#e77bdc}
+@keyframes am2HeroSlowZoom{from{transform:scale(1)}to{transform:scale(1.075)}}@keyframes am2Orbit{to{transform:rotate(360deg)}}
+@media(max-width:760px){.am2-home{padding:18px 14px 22px}.am2-home-wrap{min-height:0;grid-template-columns:1fr;gap:22px;padding:14px 0 30px}.am2-home-copy{text-align:center;margin:0 auto;width:100%}.am2-home-brand{width:210px;height:62px;margin:0 auto 22px}.am2-home-kicker{justify-content:center;font-size:8px;letter-spacing:2px}.am2-home-copy h1{margin:16px auto 13px;font-size:clamp(39px,11vw,58px);letter-spacing:-2px}.am2-home-copy>p{margin:0 auto 21px;max-width:420px;font-size:13px;line-height:1.65}.am2-home-cta{width:min(100%,360px);min-height:55px}.am2-home-proof{font-size:10px}.vsx-home-link{margin:14px auto 0;font-size:10px}.am2-hero-visual{height:clamp(390px,112vw,540px);border-radius:24px 24px 85px 24px}.am2-hero-visual:before{inset:9px;border-radius:18px 18px 75px 18px}.am2-hero-visual>img{object-position:52% center}.am2-hero-image-chip{top:20px;right:19px;padding:9px 12px;font-size:9px}.am2-hero-image-caption{left:24px;bottom:31px}.am2-hero-image-caption b{font-size:30px}.am2-qr-showcase.am2-qr-luxe{margin-top:8px;padding:25px 17px;border-radius:22px}.am2-home-bottom{margin-top:22px;font-size:9px}}
+@media(prefers-reduced-motion:reduce){.am2-hero-visual>img,.am2-hero-orbit{animation:none!important}.am2-home *{scroll-behavior:auto!important}}
 </style>
 </body>
 </html>
